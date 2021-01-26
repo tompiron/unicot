@@ -22,7 +22,7 @@ angular.module('unicot', [
 
       if(vid != null) {
         //Fetch Youtube data
-        $http({method: 'JSONP', url: 'https://noembed.com/embed?url='+url+'&format=json'}).
+        $http({method: 'JSONP', url: 'https://noembed.com/embed?url='+encodeURIComponent(url)+'&format=json'}).
           then(function(data, status) {
             let title = data.data.title;
 
